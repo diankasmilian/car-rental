@@ -10,8 +10,6 @@ align-items: center;
 
 export const MainTitle = styled.h1`
 margin: 20px 0;
-border-bottom: 1px solid #222;
-width: 100%;
 text-align: center;
 font-size: 40px;
 `
@@ -30,6 +28,10 @@ transition: transform 500ms ease;
 &:hover {
    color: #3470FF;
   transform: scale(1.05);
+
+.active {
+  color: #3470FF;
+}
 }
 `
 
