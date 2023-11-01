@@ -13,6 +13,7 @@ margin: 20px 0;
 border-bottom: 1px solid #222;
 width: 100%;
 text-align: center;
+font-size: 40px;
 `
 
 export const Nav = styled.nav`
