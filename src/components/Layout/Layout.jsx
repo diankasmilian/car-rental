@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Header, MainTitle, Nav, NavList } from './Layout.styled';
+import { Header, MainTitle, Nav, NavList, Footer } from './Layout.styled';
 
 const Layout = () => {
    return (
@@ -21,7 +21,7 @@ const Layout = () => {
         </Suspense>
       </main>
 
-      <footer>Всі права захищені &copy; </footer>
+      <Footer>Всі права захищені &copy; </Footer>
       </>
    )
 }

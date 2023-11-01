@@ -32,3 +32,8 @@ transition: transform 500ms ease;
   transform: scale(1.05);
 }
 `
+
+export const Footer = styled.footer`
+margin-top: 30px;
+text-align: center;
+`
