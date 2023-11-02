@@ -36,6 +36,6 @@ transition: transform 500ms ease;
 `
 
 export const Footer = styled.footer`
-margin-top: 30px;
+margin-top: 100px;
 text-align: center;
 `
