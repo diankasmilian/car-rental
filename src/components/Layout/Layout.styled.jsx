@@ -28,10 +28,10 @@ transition: transform 500ms ease;
 &:hover {
    color: #3470FF;
   transform: scale(1.05);
-
-.active {
-  color: #3470FF;
 }
+
+&.active {
+  color: #3470FF;
 }
 `
 
