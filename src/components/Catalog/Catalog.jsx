@@ -7,7 +7,6 @@ import CarCard from 'components/CarCard/CarCard';
 const Catalog = () => {
 const cars = useSelector(getCars);
 
-
 return (
    <Box>
    <List>
@@ -20,5 +19,3 @@ return (
 }
 
 export default Catalog;
-
-// id, img, model, make, year, rentalPrice, address, rentalCompany, type, mileage, accessories

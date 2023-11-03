@@ -15,9 +15,7 @@ export const App = () => {
   const page = useSelector(getPage)
 
   useEffect(() => {
-     dispatch(fetchCars(page));
-  
-       
+  dispatch(fetchCars(page));     
 }, [dispatch, page]);
 
   return (
