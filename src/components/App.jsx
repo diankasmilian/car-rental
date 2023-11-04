@@ -7,16 +7,17 @@ import { Box } from './App.styled';
 import CatalogView from 'views/CatalogView';
 import HomeView from 'views/HomeView';
 import Layout from './Layout/Layout';
+import FavoriteView from 'views/FavoriteView';
 
 export const App = () => {
 
   const dispatch = useDispatch();
 
-  const page = useSelector(getPage)
+  const page = useSelector(getPage);
 
   useEffect(() => {
-  dispatch(fetchCars(page));     
-}, [dispatch, page]);
+      dispatch(fetchCars(page)); 
+}, [ dispatch, page]);
 
   return (
     <Box>
@@ -24,7 +25,7 @@ export const App = () => {
       <Route path="/" element={<Layout/>}>
         <Route index element={<HomeView/>}/>
         <Route path='/catalog' element={<CatalogView/>}/>
-        <Route path='/favorite' element={<div>Favorite</div>}/>
+        <Route path='/favorite' element={<FavoriteView/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
