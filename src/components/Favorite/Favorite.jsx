@@ -1,19 +1,19 @@
 import { useSelector } from 'react-redux';
 import { getFavorite } from 'redux/selectors';
+import { Box, List } from './Favorite.styled';
+import CarCard from 'components/CarCard/CarCard';
 
 const Favorite = () => {
    const favorite = useSelector(getFavorite)
 
    return (
-      <>
-      <ul>
-         {favorite.map((favCar) => (
-            <li key={favCar.id}>
-               <h2>{favCar.make}</h2>
-            </li>
-         ))}
-      </ul>
-      </>
+      <Box>
+   <List>
+      {favorite.map((car) => (
+         <CarCard key={car.id} car={car}/>
+      ))}
+   </List>
+   </Box>
    )
 }
 

@@ -1,26 +1,26 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getFavorite } from 'redux/selectors';
 import { setFavorite, removeFavorite } from 'redux/favoriteSlice';
 import { Item, Favotire, Image, TitleBox, Title, Price, Span, DescBox, SpanLine, Button, OutlineHeart, FillHeart, ImageBox, Overlay } from './CarCard.styled';
 
 
 const CarCard = ({car}) => {
-   const [addFavorite, setAddFavorite] = useState(false)
 
    const dispatch = useDispatch();
+   const favoriteList  = useSelector(getFavorite);
+   const isFavorite = favoriteList.some(favCar => favCar.id === car.id);
    
    const handleFavoriteClick = () => {
-      if (addFavorite) {
+      if (isFavorite) {
           dispatch(removeFavorite(car));
       } else {
           dispatch(setFavorite(car));
       }
-      setAddFavorite(!addFavorite);
     };
 
     return (
 <Item>
-   <Favotire onClick={handleFavoriteClick}>{addFavorite ? <FillHeart size={18}/> : <OutlineHeart size={20}/>}</Favotire>
+   <Favotire onClick={handleFavoriteClick}>{isFavorite ? <FillHeart size={18}/> : <OutlineHeart size={20}/>}</Favotire>
             
             <ImageBox>
                <Image src={car.img} alt={car.model}/>
