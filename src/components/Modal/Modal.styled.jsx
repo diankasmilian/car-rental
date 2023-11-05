@@ -16,7 +16,7 @@ export const ModalWindow = styled.div`
   position: relative;
   max-width: 461px;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
   border-radius: 24px;
@@ -25,10 +25,10 @@ export const ModalWindow = styled.div`
 `;
 
 export const ButtonClose = styled.button`
-border: none;
-background: transparent;
-cursor: pointer;
-`
+  border: none;
+  background: transparent;
+  cursor: pointer;
+`;
 
 export const OutlineClose = styled(AiOutlineClose)`
   position: absolute;
@@ -37,88 +37,88 @@ export const OutlineClose = styled(AiOutlineClose)`
 `;
 
 export const Image = styled.img`
-width: 461px;
-height: 248px;
-border-radius: 14px;
-object-fit: cover;
-`
+  width: 461px;
+  height: 248px;
+  border-radius: 14px;
+  object-fit: cover;
+`;
 
 export const Title = styled.h2`
-margin-top: 14px;
-font-size: 18px;
-font-weight: 500;
-line-height: 24px; 
-`
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+`;
 
 export const Span = styled.span`
-color: #3470FF;
-`
+  color: #3470ff;
+`;
 export const DescBox = styled.div`
-margin-top: 8px;
-text-align: start;
-color: rgba(18, 20, 23, 0.50);
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
-`
+  margin-top: 8px;
+  text-align: start;
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+`;
 
 export const Text = styled.p`
-margin-top: 4px;
-`
+  margin-top: 4px;
+`;
 
 export const SpanLine = styled.span`
-color: rgba(18, 20, 23, 0.10);
-`
+  color: rgba(18, 20, 23, 0.1);
+`;
 
 export const Description = styled.p`
-margin-top: 14px;
-font-size: 14px;
-font-weight: 400;
-line-height: 20px;
-`
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+`;
 
 export const TitleSection = styled.h3`
-margin-top: 24px;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
-`
+  margin-top: 24px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+`;
 
 export const List = styled.ul`
-margin-top: 8px;
-margin-bottom: 24px;
-list-style: none;
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-`
+  margin-top: 8px;
+  margin-bottom: 24px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
 
 export const Item = styled.li`
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
-padding: 7px 14px;
-border-radius: 35px;
-background: #F9F9F9;
-`
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 7px 14px;
+  border-radius: 35px;
+  background: #f9f9f9;
+`;
 
 export const SpanNumber = styled.span`
-color: #3470FF;
-font-size: 12px;
-font-weight: 600;
-line-height: 18px;
-letter-spacing: -0.24px;
-`
+  color: #3470ff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+`;
 
 export const PhoneNumber = styled.a`
-text-decoration: none;
+  text-decoration: none;
 
-padding: 12px 50px;
-border-radius: 12px;
-background: #3470FF;
-color: #fff;
-font-size: 14px;
-font-weight: 600;
-line-height: 20px;
-`
+  padding: 12px 50px;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+`;

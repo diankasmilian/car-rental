@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import photo from '../../img/cars-banner.jpg'
+import { styled } from 'styled-components';
+import photo from '../../img/cars-banner.jpg';
 
 export const Presentation = styled.div`
   margin-top: 25px;
@@ -13,27 +13,27 @@ export const Presentation = styled.div`
   background-color: rgba(18, 20, 23, 0.5);
 
   &::after {
-   content: 'Fleet of Rental Cars';
-  position: absolute;
-  top: 300px;
-  left: 520px;
-  font-size: 50px;
-  font-weight: 600;
-  color: #fff;
+    content: 'Fleet of Rental Cars';
+    position: absolute;
+    top: 300px;
+    left: 520px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
   }
-`
+`;
 
 export const List = styled.ul`
-display: flex;
-justify-content: space-around;
-list-style: none;
-`
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+`;
 
 export const Item = styled.li`
-text-align: center;
-`
+  text-align: center;
+`;
 
 export const Text = styled.p`
-font-weight: 400;
-font-size: 20px;
-`
+  font-weight: 400;
+  font-size: 20px;
+`;

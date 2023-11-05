@@ -5,14 +5,14 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from 'redux/store';
 import { App } from 'components/App';
-import 'index.css'
+import 'index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <Provider store={store}>
-    <BrowserRouter basename='/car-rental'>
-    <PersistGate loading={null} persistor={persistor}>
+  <Provider store={store}>
+    <BrowserRouter basename="/car-rental">
+      <PersistGate loading={null} persistor={persistor}>
         <App />
       </PersistGate>
     </BrowserRouter>
-    </Provider>
+  </Provider>
 );

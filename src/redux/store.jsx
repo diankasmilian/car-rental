@@ -15,11 +15,11 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
- const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   cars: carsReducer,
-    filter: filterReducer,
-    page: pageReducer,
-    favorite: favoriteReducer,
+  filter: filterReducer,
+  page: pageReducer,
+  favorite: favoriteReducer,
 });
 
 const persistConfig = {
@@ -41,4 +41,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-// persistor.purge();

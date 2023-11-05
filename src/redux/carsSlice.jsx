@@ -2,25 +2,29 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchCars } from './operations';
 
 const handlePending = state => {
-   state.isLoading = true;
-   state.showLoadMore = false;
- };
- const handleRejected = (state, action) => {
-   state.isLoading = false;
-   state.error = action.payload;
-   state.showLoadMore = false;
- };
+  state.isLoading = true;
+  state.showLoadMore = false;
+};
+const handleRejected = (state, action) => {
+  state.isLoading = false;
+  state.error = action.payload;
+  state.showLoadMore = false;
+};
 
- const carsSlice = createSlice({
-   name: 'cars',
-   initialState: {
-     items: [],
-     isLoading: false,
-     error: null,
-     showLoadMore: true,
-   },
-   reducers: {},
-   extraReducers: (builder) => {
+const carsSlice = createSlice({
+  name: 'cars',
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+    showLoadMore: true,
+  },
+  reducers: {
+    clearItems(state, action) {
+      state.items = [];
+    },
+  },
+  extraReducers: builder => {
     builder
       .addCase(fetchCars.pending, handlePending)
       .addCase(fetchCars.rejected, handleRejected)
@@ -37,6 +41,6 @@ const handlePending = state => {
         }
       });
   },
-   },
- );
- export const carsReducer = carsSlice.reducer;
+});
+export const { clearItems } = carsSlice.actions;
+export const carsReducer = carsSlice.reducer;

@@ -1,9 +1,7 @@
-import Favorite from "components/Favorite/Favorite";
+import Favorite from 'components/Favorite/Favorite';
 
 const FavoriteView = () => {
-return (
-   <Favorite/>
-)
-}
+  return <Favorite />;
+};
 
 export default FavoriteView;
