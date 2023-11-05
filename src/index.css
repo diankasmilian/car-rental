@@ -11,3 +11,7 @@ body {
   font-family: Manrope, sans-serif;
   font-weight: 300;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFavorite } from 'redux/selectors';
 import { setFavorite, removeFavorite } from 'redux/favoriteSlice';
+import Modal from 'components/Modal/Modal';
 import { Item, Favotire, Image, TitleBox, Title, Price, Span, DescBox, SpanLine, Button, OutlineHeart, FillHeart, ImageBox, Overlay } from './CarCard.styled';
 
 
 const CarCard = ({car}) => {
+  const [showModal, setShowModal] = useState(false);
 
    const dispatch = useDispatch();
    const favoriteList  = useSelector(getFavorite);
@@ -18,7 +21,16 @@ const CarCard = ({car}) => {
       }
     };
 
+    const onOpenModal = () => {
+        setShowModal(true);
+      };
+    
+      const onCloseModal = () => {
+        setShowModal(false);
+      };
+
     return (
+        <>
 <Item>
    <Favotire onClick={handleFavoriteClick}>{isFavorite ? <FillHeart size={18}/> : <OutlineHeart size={20}/>}</Favotire>
             
@@ -38,8 +50,12 @@ const CarCard = ({car}) => {
             <p>{car.type}  <SpanLine>|</SpanLine>  {car.mileage}  <SpanLine>|</SpanLine>   {car.accessories[1]}</p>
             </DescBox>
             
-            <Button>Learn More</Button>
+            <Button onClick={onOpenModal}>Learn More</Button>
+
+            
          </Item>
+         {showModal && <Modal car={car} onCloseModal={onCloseModal} />}
+         </>
     )
 }
 
