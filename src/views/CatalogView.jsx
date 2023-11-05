@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { getError, getIsLoading, getShowLoadMore } from 'redux/selectors';
 import LoadMore from 'components/LoadMore/LoadMore';
 import Filter from 'components/Filter/Filter';
+import { Hourglass } from 'react-loader-spinner';
 
 const CatalogView = () => {
   const isLoading = useSelector(getIsLoading);
@@ -11,7 +12,9 @@ const CatalogView = () => {
   return (
     <>
       <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && (
+        <Hourglass wrapperStyle={{ marginTop: 100, marginLeft: 550 }} />
+      )}
       <Catalog />
       {showLoadMore && <LoadMore />}
     </>

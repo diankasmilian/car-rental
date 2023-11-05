@@ -38,3 +38,8 @@ export const Footer = styled.footer`
   margin-top: 100px;
   text-align: center;
 `;
+
+export const LoaderBox = styled.div`
+  text-align: center;
+  margin-top: 100px;
+`;

@@ -1,13 +1,14 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCars } from 'redux/operations';
 import { getPage, getFilter } from 'redux/selectors';
 import { Box } from './App.styled';
-import CatalogView from 'views/CatalogView';
-import HomeView from 'views/HomeView';
 import Layout from './Layout/Layout';
-import FavoriteView from 'views/FavoriteView';
+
+const HomeView = lazy(() => import('views/HomeView'));
+const CatalogView = lazy(() => import('views/CatalogView'));
+const FavoriteView = lazy(() => import('views/FavoriteView'));
 
 export const App = () => {
   const dispatch = useDispatch();

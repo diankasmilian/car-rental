@@ -1,6 +1,14 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Header, MainTitle, Nav, NavList, Footer } from './Layout.styled';
+import { Hourglass } from 'react-loader-spinner';
+import {
+  Header,
+  MainTitle,
+  Nav,
+  NavList,
+  Footer,
+  LoaderBox,
+} from './Layout.styled';
 
 const Layout = () => {
   return (
@@ -16,7 +24,13 @@ const Layout = () => {
       </Header>
 
       <main>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <LoaderBox>
+              <Hourglass />
+            </LoaderBox>
+          }
+        >
           <Outlet />
         </Suspense>
       </main>
